@@ -1,0 +1,13 @@
+.center-content-cls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .links {
+      padding-right: 10px;
+      text-decoration: underline;
+      color: blue;
+  }

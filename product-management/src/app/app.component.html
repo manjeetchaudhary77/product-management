@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <span>Project Management</span>
+  <span class="example-spacer"></span>
+  <span class="links"><a routerLink="/" >Home</a></span>
+  <span class="links"><a routerLink="/products" >Products</a></span>
+  <span class="links"><a routerLink="/customers" >Customer</a></span>
+  <span class="links"><a role="button" (click)="logout()" *ngIf="isUserLoggedIn">({{userInfo?.type}}) Logout</a></span>
+</mat-toolbar>
+<div class="center-content-cls">
+  <router-outlet></router-outlet>
+</div>

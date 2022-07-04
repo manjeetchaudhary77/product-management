@@ -1,0 +1,84 @@
+<div>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Customer</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="example-container">
+                <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" required autocomplete="off">
+                        <mat-error *ngIf="customerForm.get('name').invalid && (customerForm.get('name').dirty || customerForm.get('name').touched)">
+                            Please provide a name.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput formControlName="email" required autocomplete="off">
+                        <mat-error *ngIf="customerForm.get('email').invalid && (customerForm.get('email').dirty || customerForm.get('email').touched)">
+                            Please provide a valid email address.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Enter Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required autocomplete="off">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="customerForm.get('password').invalid && (customerForm.get('password').dirty || customerForm.get('password').touched)">
+                            Please provide a password.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Enter Confirm Password</mat-label>
+                        <input matInput [type]="confirmHide ? 'password' : 'text'" formControlName="confirmPassword" required autocomplete="off">
+                        <button mat-icon-button matSuffix (click)="confirmHide = !confirmHide" [attr.aria-label]="'confirm Hide password'" [attr.aria-pressed]="confirmHide">
+                            <mat-icon>{{confirmHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="customerForm.get('confirmPassword').invalid && (customerForm.get('confirmPassword').dirty || customerForm.get('confirmPassword').touched)">
+                            Please provide confirm password.
+                        </mat-error>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput formControlName="contactNumber" required autocomplete="off" type="number">
+                        <mat-error *ngIf="customerForm.get('contactNumber').invalid && (customerForm.get('contactNumber').dirty || customerForm.get('contactNumber').touched)">
+                            Please provide a valid Number.
+                        </mat-error>
+                    </mat-form-field>
+                    <div formGroupName="address">
+                        <h4 > Address</h4>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>House</mat-label>
+                            <input matInput formControlName="house" autocomplete="off">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Street</mat-label>
+                            <input matInput formControlName="street" autocomplete="off">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Area</mat-label>
+                            <input matInput formControlName="area" autocomplete="off">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="city" autocomplete="off">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>State</mat-label>
+                            <input matInput formControlName="state" autocomplete="off">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Country</mat-label>
+                            <input matInput formControlName="country" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    
+                    <button mat-raised-button color="primary" type="submit"  class="full-width" [disabled]="customerForm.invalid">Submit</button>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

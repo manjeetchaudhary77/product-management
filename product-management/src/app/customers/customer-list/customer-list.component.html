@@ -1,0 +1,28 @@
+<div class="customer-component">
+    <div class="upper-section">
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput #input autocomplete="off" [(ngModel)]="search" ng-model-options='{ debounce: 500 }'>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addNewCustomer()">Add New Customer</button>
+    </div>
+  
+    <table class="table-container">
+        <thead>
+            <th>Customer Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of customerList | customFilter: search ">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.contactNumber}}</td>
+                <td><mat-icon class="action-cls" (click)="editCustomer(item)">edit</mat-icon></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

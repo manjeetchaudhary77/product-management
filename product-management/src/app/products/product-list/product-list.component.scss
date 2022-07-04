@@ -1,0 +1,25 @@
+.product-component {
+    width: 100%;
+}
+.upper-section {
+    mat-form-field, button {
+        width: 50%;
+    }
+}
+table {
+    min-width: 500px;
+  }
+.table-container {
+    text-align: left;
+    border-collapse: collapse; 
+}
+.action-cls {
+    cursor: pointer;
+    vertical-align: middle;
+}
+.orange-rating {
+    border: 1px solid orange;
+}
+.red-rating {
+    border: 1px solid red;
+}

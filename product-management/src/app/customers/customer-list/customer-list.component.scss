@@ -1,0 +1,18 @@
+.customer-component {
+    width: 100%;
+}
+.upper-section {
+    mat-form-field, button {
+        width: 50%;
+    }
+}
+table {
+    min-width: 500px;
+  }
+.table-container {
+    text-align: left;
+}
+.action-cls {
+    cursor: pointer;
+    vertical-align: middle;
+}

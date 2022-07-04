@@ -1,0 +1,107 @@
+{
+  "siginIn": [
+    {"email": "admin@user.com", "password": "1234", "type": "admin"},
+    {"email": "user@user.com", "password": "1234", "type": "user"}
+  ],
+  "products": [
+    {
+      "name": "TV MI 52 inch",
+      "category": "Electronic Appliance",
+      "rating": 3,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Croma Washing machine 8 kg",
+      "category": "Electronic Appliance",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "name": "Ultimate Boom",
+      "category": "Electronic Appliance",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Wooden Cupboard",
+      "category": "Furniture",
+      "rating": 2
+    },
+    {
+      "id": 5,
+      "name": "TVS Apache RR 310",
+      "category": "Vehcile",
+      "rating": 5
+    },
+    {
+      "name": "test",
+      "category": "Electronic Appliance",
+      "rating": 5,
+      "id": 6
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "abcd 12345",
+      "email": "abcd1234@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "contactNumber": "1234567890",
+      "address": {
+        "house": "H.No. 1234",
+        "street": "Main my street",
+        "area": "Palam Vihar",
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "country": "India"
+      }
+    },
+    {
+      "id": 2,
+      "name": "xyz 1234",
+      "email": "xyz1234@gmail.com",
+      "password": "1234",
+      "contactNumber": "0987654321",
+      "address": {
+        "house": "H.No. 4321",
+        "street": "Main ur street",
+        "area": "Ashok Vihar",
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "country": "India"
+      }
+    },
+    {
+      "id": 3,
+      "name": "1234 abcd",
+      "email": "1234abcd@gmail.com",
+      "password": "1234",
+      "contactNumber": "1112223334",
+      "address": {
+        "house": "H.No. abcd",
+        "street": "Main his street",
+        "area": "Sector-47",
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "country": "India"
+      }
+    },
+    {
+      "id": 4,
+      "name": "4321 xyz",
+      "email": "4321xyz@gmail.com",
+      "password": "1234",
+      "contactNumber": "1231231234",
+      "address": {
+        "house": "H.No. xyz",
+        "street": "Main  street",
+        "area": "Sector-10",
+        "city": "Delhi",
+        "state": "Delhi",
+        "country": "India"
+      }
+    }
+  ]
+}
